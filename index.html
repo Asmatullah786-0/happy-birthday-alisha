@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Birthday Alisha ❤️</title>
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
+
+body{
+font-family:Arial,sans-serif;
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+overflow:hidden;
+background:linear-gradient(135deg,#ff5fa2,#ffb6c1,#ffd1dc);
+}
+
+.container{
+width:90%;
+max-width:700px;
+background:rgba(255,255,255,.18);
+backdrop-filter:blur(12px);
+padding:35px;
+border-radius:25px;
+text-align:center;
+color:white;
+box-shadow:0 0 25px rgba(0,0,0,.25);
+animation:fadeIn 2s;
+z-index:2;
+}
+
+h1{
+font-size:50px;
+margin-bottom:10px;
+}
+
+h2{
+color:#fff7a5;
+margin-bottom:20px;
+}
+
+p{
+font-size:20px;
+line-height:1.8;
+}
+
+button{
+margin-top:25px;
+padding:15px 35px;
+font-size:18px;
+border:none;
+border-radius:30px;
+cursor:pointer;
+background:white;
+color:#ff2d75;
+font-weight:bold;
+transition:.3s;
+}
+
+button:hover{
+transform:scale(1.1);
+}
+
+#surprise{
+display:none;
+margin-top:30px;
+font-size:24px;
+color:#fff9b0;
+animation:fadeIn 2s;
+}
+
+.heart{
+position:absolute;
+color:red;
+font-size:22px;
+animation:fly 8s linear infinite;
+opacity:.7;
+}
+
+@keyframes fly{
+0%{
+transform:translateY(100vh);
+opacity:0;
+}
+100%{
+transform:translateY(-120vh);
+opacity:1;
+}
+}
+
+@keyframes fadeIn{
+from{opacity:0;transform:scale(.8);}
+to{opacity:1;transform:scale(1);}
+}
+</style>
+</head>
+
+<body>
+
+<audio autoplay loop>
+<source src="happybirthday.mp3" type="audio/mpeg">
+</audio>
+
+<div class="container">
+
+<h1>🎂 Happy Birthday 🎂</h1>
+
+<h2>My Dear Alisha ❤️</h2>
+
+<p>
+Today is a very special day because it's your birthday. ❤️<br><br>
+
+May Allah bless you with endless happiness, success, good health, peace, and lots of love.
+May every dream in your heart come true, and may your beautiful smile always stay on your face.
+
+You deserve all the happiness in the world.
+
+🌹 Happy Birthday, Alisha! 🌹
+</p>
+
+<button onclick="showSurprise()">Click Here My Love ❤️</button>
+
+<div id="surprise">
+
+🎉 I Love You Alisha ❤️ 🎉
+
+<br><br>
+
+You are the most beautiful part of my life.
+
+Thank you for making my world brighter.
+
+May Allah always protect you, keep you smiling, and bless you with everything your heart desires.
+
+❤️ Happy Birthday Once Again My Queen ❤️
+
+</div>
+
+</div>
+
+<script>
+
+function showSurprise(){
+
+document.getElementById("surprise").style.display="block";
+
+for(let i=0;i<200;i++){
+
+let c=document.createElement("div");
+
+c.innerHTML=["🎉","❤️","🎂","💖","✨"][Math.floor(Math.random()*5)];
+
+c.style.position="fixed";
+c.style.left=Math.random()*100+"vw";
+c.style.top="-20px";
+c.style.fontSize=(20+Math.random()*25)+"px";
+c.style.animation="fall "+(3+Math.random()*3)+"s linear forwards";
+
+document.body.appendChild(c);
+
+setTimeout(()=>c.remove(),7000);
+
+}
+
+}
+
+const style=document.createElement("style");
+
+style.innerHTML=`
+@keyframes fall{
+to{
+transform:translateY(110vh) rotate(720deg);
+opacity:0;
+}
+}
+`;
+
+document.head.appendChild(style);
+
+setInterval(()=>{
+
+let h=document.createElement("div");
+
+h.className="heart";
+
+h.innerHTML="❤️";
+
+h.style.left=Math.random()*100+"vw";
+
+h.style.fontSize=(20+Math.random()*30)+"px";
+
+h.style.animationDuration=(5+Math.random()*5)+"s";
+
+document.body.appendChild(h);
+
+setTimeout(()=>h.remove(),10000);
+
+},300);
+
+</script>
+
+</body>
+</html>
